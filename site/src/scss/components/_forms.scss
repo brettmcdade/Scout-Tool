@@ -1,0 +1,97 @@
+//
+// Forms
+// --------------------------------------------------
+
+$form-padding: 8px 12px;
+$form-height: 45px;
+$form-max-width: 300px;
+$form-border: 1px solid #777;
+
+
+
+.form-fields {
+  list-style: none;
+  margin: 0;
+}
+
+  .form-fields > li {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+    .form-fields > li:last-child {
+      margin-bottom: 0;
+    }
+
+
+label,
+.label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+
+
+
+/* Input Fields */
+
+.input-field {
+  padding: $form-padding;
+  border: $form-border;
+  max-width: $form-max-width;
+  display: block;
+  border-radius: 0;
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+  
+  .input-field:focus  {
+    border-color: #000;
+  }
+
+  .input-field[row] {
+    height: auto;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    height: $form-height;
+  }
+
+
+
+
+/* Form Validation */
+
+.has-error {
+  .form__control {
+    color: #ff0000 !important;
+    background-color: #ffe5e5 !important;
+    border-color: #ff0000 !important;
+  }
+
+  label {
+    color: #ff0000 !important;
+  }
+}
+
+.has-success {
+  .form__control {
+    color: #2ECC71 !important;
+    border-color: #2ECC71 !important;
+  }
+
+  label {
+    color: #2ECC71 !important;
+  }
+}
+
+
+.form__control[disabled], 
+.form__control[readonly], 
+fieldset[disabled] .form__control {
+    background-color: #F4F6F6;
+    border-color: #D5DBDB;
+    color: #D5DBDB;
+    cursor: default;
+}
